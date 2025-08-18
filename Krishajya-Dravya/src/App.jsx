@@ -1,8 +1,9 @@
 import React from 'react';
 import HaderHome from './component/home/haderHome';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ProductAdd from "./component/home/ProductAdd"; // fixed path
+import ProductAdd from "./component/home/ProductAdd";
 import Order from './component/orders/order';
+import Contact from './component/contact/contact';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<HaderHome />} />
         <Route path="/add-product" element={<ProductAdd />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

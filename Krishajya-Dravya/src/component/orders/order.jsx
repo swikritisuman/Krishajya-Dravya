@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../all/nav'
+import Footer from '../all/footer'
 
 function order() {
     return (
@@ -90,6 +91,7 @@ function order() {
 
             </div>
         </div>
+        <Footer/>
         </>
         
     )

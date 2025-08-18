@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Nav from "../all/nav";
-
+import Footer from "../all/footer";
 const ProductAdd = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
@@ -92,6 +92,7 @@ const ProductAdd = () => {
         </div>
       )}
     </div>
+    <Footer/>
     </>
     
   );
