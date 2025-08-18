@@ -22,7 +22,7 @@ const Nav = () => {
               Product <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded">New</span>
             </Link>
 
-            <a href="#" className="hover:text-green-600">How It Works</a>
+            <a href="/order" className="hover:text-green-600">Order</a>
             <a href="#" className="hover:text-green-600">Blog</a>
             <a href="#" className="hover:text-green-600">Contact</a>
           </nav>

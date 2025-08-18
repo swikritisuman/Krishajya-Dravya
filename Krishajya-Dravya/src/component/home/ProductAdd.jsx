@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Nav from "../all/nav";
 
 const ProductAdd = () => {
   const [products, setProducts] = useState([]);
@@ -31,6 +32,8 @@ const ProductAdd = () => {
   };
 
   return (
+    <>
+    <Nav/>
     <div className="relative min-h-screen bg-gray-50 p-6">
       {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-20">
@@ -89,6 +92,8 @@ const ProductAdd = () => {
         </div>
       )}
     </div>
+    </>
+    
   );
 };
 
