@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Tomato",
+        "category": "Vegetable",
+        "weight": "1kg",
+        "quantity": 50,
+        "price": 40,
+        "image_url": "public/products/tomato.jpg",
+        "description": "Fresh red tomatoes, ideal for salads and cooking."
+    },
+    {
+        "id": 2,
+        "name": "Potato",
+        "category": "Vegetable",
+        "weight": "5kg",
+        "quantity": 100,
+        "price": 200,
+        "image_url": "public/products/potato.jpg",
+        "description": "High-quality potatoes perfect for fries and curries."
+    },
+    {
+        "id": 3,
+        "name": "Onion",
+        "category": "Vegetable",
+        "weight": "2kg",
+        "quantity": 80,
+        "price": 100,
+        "image_url": "public/products/onion.jpg",
+        "description": "Fresh onions, great for cooking and garnishing."
+    },
+    {
+        "id": 4,
+        "name": "Carrot",
+        "category": "Vegetable",
+        "weight": "1kg",
+        "quantity": 60,
+        "price": 50,
+        "image_url": "public/products/carrot.jpg",
+        "description": "Crunchy and sweet carrots, rich in Vitamin A."
+    },
+    {
+        "id": 5,
+        "name": "Cabbage",
+        "category": "Vegetable",
+        "weight": "1.5kg",
+        "quantity": 40,
+        "price": 60,
+        "image_url": "public/products/cabbage.jpg",
+        "description": "Fresh green cabbage, ideal for salads and cooking."
+    },
+    {
+        "id": 6,
+        "name": "Cauliflower",
+        "category": "Vegetable",
+        "weight": "1.2kg",
+        "quantity": 35,
+        "price": 70,
+        "image_url": "public/products/cauliflower.jpg",
+        "description": "Healthy and fresh cauliflower, perfect for curries."
+    },
+    {
+        "id": 7,
+        "name": "Spinach",
+        "category": "Vegetable",
+        "weight": "500g",
+        "quantity": 75,
+        "price": 30,
+        "image_url": "public/products/spinach.jpg",
+        "description": "Nutritious spinach leaves, great for soups and salads."
+    },
+    {
+        "id": 8,
+        "name": "Capsicum",
+        "category": "Vegetable",
+        "weight": "1kg",
+        "quantity": 45,
+        "price": 90,
+        "image_url": "public/products/capsicum.jpg",
+        "description": "Colorful capsicums, perfect for stir-fries and curries."
+    },
+    {
+        "id": 9,
+        "name": "Brinjal",
+        "category": "Vegetable",
+        "weight": "1kg",
+        "quantity": 55,
+        "price": 60,
+        "image_url": "public/products/brijal.jpg",
+        "description": "Fresh brinjals, ideal for Indian curries."
+    },
+    {
+        "id": 10,
+        "name": "Lady Finger",
+        "category": "Vegetable",
+        "weight": "1kg",
+        "quantity": 65,
+        "price": 70,
+        "image_url": "public/products/lady's finger.jpg",
+        "description": "Fresh lady fingers, great for frying and curries."
+    }
+]

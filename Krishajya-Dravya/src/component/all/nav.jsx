@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaShoppingBag, FaHeart } from 'react-icons/fa';
-import logo from '../../../public/logo.png'
+import { Link } from 'react-router-dom';  // import Link
+import logo from '../../../public/logo.png';
 
-const nav = () => {
+const Nav = () => {
   return (
     <div className="bg-[#f9f6f0] min-w-screen">
       {/* Navbar */}
@@ -12,12 +13,15 @@ const nav = () => {
           <img src={logo} alt="Logo" className="w-20 h-20" />
           <h1 className="text-lg font-bold text-gray-800 font-sans">KRISAJYA DRAVYA</h1>
           <nav className="hidden sm:flex gap-6 font-bold text-gray-700">
-            <a href="#" className="hover:text-green-600">Home</a>
+            <Link to="/" className="hover:text-green-600">Home</Link>
             <a href="#" className="hover:text-green-600">History</a>
             <a href="#" className="hover:text-green-600">Pages</a>
-            <a href="#" className="hover:text-green-600 flex items-center gap-1">
+
+            {/* FIX HERE */}
+            <Link to="/add-product" className="hover:text-green-600 flex items-center gap-1">
               Product <span className="bg-red-500 text-white text-xs px-2 py-0.5 rounded">New</span>
-            </a>
+            </Link>
+
             <a href="#" className="hover:text-green-600">How It Works</a>
             <a href="#" className="hover:text-green-600">Blog</a>
             <a href="#" className="hover:text-green-600">Contact</a>
@@ -60,4 +64,4 @@ const nav = () => {
   );
 };
 
-export default nav;
+export default Nav;
