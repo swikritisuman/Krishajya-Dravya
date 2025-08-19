@@ -46,21 +46,13 @@ const product = () => {
   ];
 
   const carouselItems = [
-    {
-      image:
-        "https://images.pexels.com/photos/27939229/pexels-photo-27939229/free-photo-of-a-shelf-with-snacks-and-snacks-on-it.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      label: "Grocery",
-    },
+   
     {
       image:
         "https://images.pexels.com/photos/2733918/pexels-photo-2733918.jpeg",
       label: "Fresh Vegetable",
     },
-    {
-      image:
-        "https://images.pexels.com/photos/5845848/pexels-photo-5845848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      label: "Dairy",
-    },
+    
     {
       image:
         "https://images.pexels.com/photos/375897/pexels-photo-375897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -76,13 +68,13 @@ const product = () => {
 
   return (
     <div className="bg-[#f6f3ef] font-sans min-h-screen">
-      <div className="flex justify-center overflow-x-auto p-5 px-12 gap-8 items-center">
+      <div className="flex justify-between overflow-x-auto p-5 px-20 gap-8 items-center">
         {carouselItems.map((item, index) => (
           <div key={index} className="relative flex-none">
             <img
               src={item.image}
               alt={item.label}
-              className="w-64 h-40 object-cover rounded-lg"
+              className="w-96 h-40 object-cover rounded-lg"
             />
             <span className="absolute bottom-2 left-2 text-white font-bold bg-black/50 px-3 py-1 rounded">
               {item.label}
@@ -114,12 +106,7 @@ const product = () => {
             <div className="text-xs text-gray-500 mt-2">{product.type}</div>
             <div className="font-bold text-sm mt-1">{product.name}</div>
             <div className="text-sm my-2">{product.price}</div>
-            <div className="flex justify-center items-center gap-2">
-              <button className="bg-gray-200 px-2 py-1 font-bold">-</button>
-              <span className="w-5 text-center">2</span>
-              <button className="bg-gray-200 px-2 py-1 font-bold">+</button>
-            </div>
-            <button className="bg-blue-900 text-white px-4 py-1 rounded mt-3">🛒</button>
+
           </div>
         ))}
       </div>

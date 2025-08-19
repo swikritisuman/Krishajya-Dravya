@@ -13,16 +13,16 @@ const banner = () => {
         </p>
         <div className="flex gap-4 mb-4 flex-wrap">
           <a
-            href="#"
+            href="/add-product"
             className="bg-[#76b947] hover:bg-[#5e9e3c] text-white px-5 py-3 rounded-lg font-semibold transition duration-300 hover:shadow-lg"
           >
             DISCOVER NOW
           </a>
           <a
-            href="#"
+            href="/contact"
             className="bg-[#f7941d] hover:bg-[#e68410] text-white px-5 py-3 rounded-lg font-semibold transition duration-300 hover:shadow-lg"
           >
-            ABOUT US
+            CONTACT US
           </a>
         </div>
         <a href="mailto:Info@gmail.com" className="text-[#004aad] font-bold underline">

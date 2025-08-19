@@ -35,6 +35,22 @@ const ProductAdd = () => {
     <>
     <Nav/>
     <div className="relative min-h-screen bg-gray-50 p-6">
+    {/* Search Bar */}
+      <div className="flex items-center justify-center gap-4 bg-white px-8 py-6">
+        <select className="border border-gray-300 px-4 py-2 rounded text-base font-bold cursor-pointer">
+          <option disabled selected>Select Category</option>
+          <option value="fruits">Fruits</option>
+          <option value="vegetables">Vegetables</option>
+          <option value="dairy">Dairy Products</option>
+          <option value="beverages">Beverages</option>
+          <option value="fish">Fishes</option>
+        </select>
+        <input
+          type="text"
+          placeholder="Search product"
+          className="w-1/2 px-4 py-2 border border-gray-300 rounded text-lg"
+        />
+      </div>
       {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-20">
         {products.map((item) => (
