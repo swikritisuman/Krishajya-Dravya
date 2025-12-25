@@ -1,0 +1,478 @@
+/* 🌾 Cropset — Final Clean Styles (FULL FILE) */
+
+/* Root variables */
+:root {
+  --max-width: 1100px;
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --muted: #6b6b6b;
+  --accent1: #4caf50;
+  --accent2: #f9d632;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(10, 10, 10, 0.08);
+  --gap: 18px;
+  --header-height: 64px;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #111;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding-top: var(--header-height); /* reserve space for fixed header */
+}
+
+/* Page container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ------------------------------------------------------------------
+   FINAL FIXED + SLIDING HEADER
+------------------------------------------------------------------ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  z-index: 9999;
+  transition: transform 0.28s ease, box-shadow 0.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+/* hide on scroll (App.jsx toggles this class) */
+.site-header--hidden {
+  transform: translateY(-100%);
+}
+
+/* inner wrapper */
+.header-inner {
+  max-width: var(--max-width);
+  height: var(--header-height);
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+/* thin gradient bar under header */
+.header-gradient {
+  height: 6px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+}
+
+/* Branding */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-link {
+  display: inline-block;
+}
+.brand-logo {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px;
+}
+.brand-title {
+  font-weight: 700;
+  font-size: 20px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation */
+.nav {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* nav links style */
+.nav-list a,
+.profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #111;
+  background: rgba(255, 255, 255, 0.9);
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.nav-list a:hover,
+.profile-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* profile small avatar */
+.avatar-sm {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  width: 44px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger .hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #111;
+  margin: 3px 0;
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------------
+   Panels & content
+------------------------------------------------------------------ */
+.panel {
+  margin: 20px 0;
+}
+
+.panel-head h1 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.panel-head h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Cards & Layout */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: #fff;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.panel-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Chart */
+.chart-card canvas {
+  width: 100% !important;
+}
+
+/* Crop grid */
+.grid-crops {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.crop-card {
+  background: linear-gradient(180deg, #fff, #fbfbfb);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+
+.crop-card:hover {
+  transform: translateY(-5px);
+}
+
+.crop-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Forms */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+input[type="file"] {
+  font-size: 14px;
+}
+
+.preview-wrap {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.preview-wrap img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: #111;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--accent1);
+  color: var(--accent1);
+}
+
+/* Chips */
+.chip-row {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background: #fff;
+}
+
+.chip:hover {
+  background: var(--accent1);
+  color: #fff;
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: #111;
+  text-align: center;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* ---------------- Profile large avatar (IN CONTENT) ---------------- */
+/* Constrain the big profile photo shown on page (not header) */
+.profile-card {
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-card img,
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 18px rgba(10, 10, 10, 0.12);
+}
+
+/* If the image is inside a fluid container, ensure container doesn't stretch it */
+.profile-wrap,
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------- Responsive tweaks ---------------- */
+
+@media (max-width: 1400px) {
+  :root {
+    --max-width: 1000px;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --max-width: 1200px;
+  } /* optional: slightly wider on huge screens */
+}
+
+@media (max-width: 960px) {
+  .panel-row {
+    grid-template-columns: 1fr;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: var(--header-height);
+    right: 12px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transform-origin: top right;
+    transform: scaleY(0);
+    transition: transform 0.22s ease;
+    z-index: 9998;
+  }
+
+  .nav.open {
+    transform: scaleY(1);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .nav-list a {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  :root {
+    --header-height: 56px;
+  }
+  .brand-title {
+    font-size: 18px;
+  }
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .profile-card img {
+    width: 110px;
+    height: 110px;
+  }
+  .header-inner {
+    padding: 6px 12px;
+  }
+}
